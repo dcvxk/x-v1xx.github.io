@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-V1XX * TWEAKS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Foda+Display&family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+      color: #e0e0e0;
+      overflow-x: hidden;
+    }
+
+    .top-bar {
+      width: 100%;
+      height: 80px;
+      background-color: rgba(10, 10, 10, 0.95);
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(150, 0, 255, 0.3);
+    }
+
+    .top-bar img {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .top-bar img:hover {
+      transform: rotate(360deg);
+    }
+
+    .carousel {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      margin-top: 120px;
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+    }
+
+    .carousel img {
+      width: 100%;
+      height: auto;
+      animation: slide 15s infinite;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    .title {
+      text-align: center;
+      font-size: 120px;
+      font-family: 'Anton', sans-serif;
+      color: #9c4eff;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      animation: glow 1.5s ease-in-out infinite, shake 1s ease-in-out infinite;
+      margin-top: 50px;
+      text-shadow: 0 0 10px #5c2c91, 0 0 30px #9c4eff, 0 0 60px #9c4eff;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 10px #9c4eff, 0 0 30px #9c4eff, 0 0 60px #9c4eff;
+      }
+      100% {
+        text-shadow: 0 0 20px #6600cc, 0 0 40px #6600cc, 0 0 70px #6600cc;
+      }
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+    }
+
+    .download-btn {
+      display: block;
+      width: 220px;
+      height: 60px;
+      margin: 40px auto;
+      background-color: #1f1f1f;
+      border: 2px solid #9c4eff;
+      border-radius: 30px;
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(156, 78, 255, 0.3);
+    }
+
+    .download-btn:hover {
+      background-color: #2b2b2b;
+      transform: scale(1.1) rotate(2deg);
+      box-shadow: 0 0 30px #9c4eff;
+    }
+
+    .download-btn:active {
+      transform: scale(0.95);
+    }
+
+    .container, .features {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .feature {
+      background-color: #111;
+      padding: 40px;
+      margin: 0 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 20px rgba(156, 78, 255, 0.1);
+    }
+
+    .feature:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px #9c4eff;
+    }
+
+    .feature i {
+      font-size: 50px;
+      color: #9c4eff;
+      margin-bottom: 20px;
+    }
+
+    .feature h3 {
+      font-size: 28px;
+      color: #b478ff;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 18px;
+      color: #c9b8ff;
+    }
+
+    .discord-logo {
+      display: block;
+      width: 100px;
+      margin: 50px auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 10px #9c4eff);
+    }
+
+    .discord-logo:hover {
+      transform: scale(1.1);
+    }
+
+    .feature:hover i {
+      animation: pulse 1.5s ease-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <img src="https://cdn.discordapp.com/attachments/1373729003881627831/1373816859966701578/Neon_Green_Modern_Graffiti_Urban_Spray_Logo.png?ex=682bca27&is=682a78a7&hm=1f38b2cd4910ae3d3a2cf994962a8158c503c67cf66c6c759f843d9116bbe5ea&" alt="V1XX-TWEAKS Logo">
+  </div>
+
+  <div class="carousel">
+    <img src="https://cdn.discordapp.com/attachments/1373729003881627831/1373815082709942372/image.png?ex=682bc87f&is=682a76ff&hm=5a8b9d399efd26c1a7cae28982d55b4eabc63a731c630f288d7d1fce840a93a0&" alt="Imagen 1">
+    <img src="https://cdn.discordapp.com/attachments/1373729003881627831/1373815082709942372/image.png?ex=682bc87f&is=682a76ff&hm=5a8b9d399efd26c1a7cae28982d55b4eabc63a731c630f288d7d1fce840a93a0&" alt="Imagen 2">
+    <img src="https://cdn.discordapp.com/attachments/1373729003881627831/1373815082709942372/image.png?ex=682bc87f&is=682a76ff&hm=5a8b9d399efd26c1a7cae28982d55b4eabc63a731c630f288d7d1fce840a93a0&" alt="Imagen 3">
+    <img src="https://cdn.discordapp.com/attachments/1373729003881627831/1373815082709942372/image.png?ex=682bc87f&is=682a76ff&hm=5a8b9d399efd26c1a7cae28982d55b4eabc63a731c630f288d7d1fce840a93a0&" alt="Imagen 4">
+  </div>
+
+  <!-- Título con animación -->
+  <div class="title">
+    X-V1XX
+  </div>
+
+  <!-- Contenedor de características -->
+  <div class="container">
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-gamepad"></i>
+        <h3>Mejor FPS</h3>
+        <p>Aumenta la tasa de frames en tus juegos para una experiencia más fluida.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-wifi"></i>
+        <h3>Ping Más Bajo</h3>
+        <p>Optimiza tu conexión para obtener la menor latencia posible.</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-microchip"></i>
+        <h3>Optimización Avanzada</h3>
+        <p>Mejora el rendimiento de tu PC eliminando procesos innecesarios.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón de descarga -->
+<button class="download-btn" onclick="window.open('TU_LINK_DE_DESCARGA', '_blank')">Descargar</button>
+
+<!-- Logo de Discord -->
+<img class="discord-logo"
+     src="https://darkanddarker.wiki.spellsandguns.com/images/thumb/1/15/Discord_logo.webp/213px-Discord_logo.webp.png"
+     alt="Logo de Discord"
+     onclick="window.open('https://discord.gg/bECmwEGgeH', '_blank')"
+     style="cursor: pointer;">
+  </a>
+
+</body>
+</html>
