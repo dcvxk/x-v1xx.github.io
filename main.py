@@ -6,7 +6,7 @@ from tkinter import filedialog
 import platform
 import subprocess
 
-os.system("color 5")
+os.system("color 9")
 os.system("title X-V1XX BETA V1.0.0")
 os.system("cls")
 
@@ -135,7 +135,7 @@ while True:
     if opciones == "2":
         os.system("cls")
         time.sleep(0.5)
-        os.chdir("cd contenido/tweaks_ping")
+        os.chdir("contenido/tweaks_ping")
         os.system("regedit /s lantencia.reg")
         os.system("regedit /s ping.reg")
         os.system("regedit /s ping1.reg")
@@ -145,7 +145,7 @@ while True:
     if opciones == "3":
         os.system("cls")
         time.sleep(0.5)
-        os.chdir("cd contenido/tweaks_latencia")
+        os.chdir("contenido/tweaks_latencia")
         os.system("start latencia.reg")
         print("TWEAKS -LATENCIA APLICADOS ✓")
         os.system("cls")
@@ -172,6 +172,7 @@ while True:
         print(banner)
         
         print("🚨 Reporte de error 🚨")
+        print("DESABILITADO TEMPORALMENTE.")
         print("Si tienes algún problema, por favor envía un reporte.")
         print("Tu información será enviada a un canal privado de Discord.")
         print("No olvides incluir una captura de pantalla del error.")
