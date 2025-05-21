@@ -7,7 +7,7 @@ import platform
 import subprocess
 
 os.system("color 5")
-os.system("title X-V1XX BOOSTER V1.0.0")
+os.system("title X-V1XX BETA V1.0.0")
 os.system("cls")
 
 memoria = """
